@@ -1,0 +1,101 @@
+<html>
+  <body>
+    <script>
+      var choice = "yes"
+      var shirt = ",shirt"
+      function Start(){
+        alert("you wake up lying on the floor of a room. You have no idea how you got there. You get up and look around the room")
+        N()
+      }
+      function shirta(){
+        if (shirt == ",shirt"){
+          return " There is also a shirt on a table."
+        }else{
+          return ""
+        }
+      }
+      function N () {
+        choice = prompt("There is a sign saying \"North\". The room has 3 exits. They are labeled south, west, and east. There is also a small bed (south,east,west,sleep)")
+        if(choice=="south"){
+          S()
+        }
+        if(choice=="west"){
+          W()
+        }
+        if(choice=="east"){
+          E()
+        }
+        if(choice=="sleep"){
+          choice=prompt("you go to sleep. You dont wake up. Play again?(yes,no)")
+          play()
+        }else{
+          alert("that was not one of the choices")
+          N()
+        }
+
+      }
+      function S () {
+        choice = prompt("There is a sign saying \"South\". The room has 3 exits. They are labeled north, west, and east. There is a glass of clear liquid. (north,east,west,drink)")
+        if(choice=="north"){
+          N()
+        }
+         if(choice=="west"){
+          W()
+        }
+         if(choice=="east"){
+          E()
+        }
+         if(choice=="drink"){
+           choice= prompt("you drink. It tastes strange. Your feeling quite tired. You fall over, dead. Play again?(yes,no)")
+           play()
+        }else{
+          alert("that was not one of the choices")
+          S()
+        }
+      }
+      function E () {
+        choice = prompt("There is a sign saying \"East\". The room has 3 exits. They are labeled south, west, and north. There is also bathtub filled with water. (south,north,west,bath)")
+        if(choice=="south"){
+          S()
+        }else if(choice=="west"){
+          W()
+        }else if(choice=="north"){
+          N()
+        }else if(choice=="bath"){
+          choice=prompt("you go start taking a bath. Suddenly the liquid starts feeling viscous. Before you can react it solidifies. Play again?(yes,no)")
+          play()
+        }else{
+          alert("that was not one of the choices")
+          E()
+        }
+      }
+      function W () {
+        choice = prompt("There is a sign saying \"West\". The room has 3 exits. They are labeled south, north, and east." +shirta()+ "(south,east,north"+shirt+")")
+        if(choice=="south"){
+          S()
+        }else if(choice=="north"){
+          N()
+        }else if(choice=="east"){
+          E()
+        }else if(choice=="shirt"){
+          choice=alert("you put on the shirt.")
+          shirt = ""
+          W()
+        }else{
+          alert("that was not one of the choices")
+          W()
+        }
+      }
+
+      function play(){
+        if (choice == "yes"){
+          Start()
+        }
+      }
+      play()
+
+
+
+    </script>
+  </body>
+</html>
