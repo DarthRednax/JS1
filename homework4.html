@@ -1,0 +1,64 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+    function go(){
+      var one = document.getElementById('one').value
+      var two = document.getElementById('two').value
+      var three = document.getElementById('three').value
+      var four = document.getElementById('four').value
+      var five = document.getElementById('five').value
+      var six = document.getElementById('six').value
+      document.getElementById('one').style.display="none"
+      document.getElementById('two').style.display="none"
+      document.getElementById('three').style.display="none"
+      document.getElementById('four').style.display="none"
+      document.getElementById('five').style.display="none"
+      document.getElementById('six').style.display="none"
+      document.getElementById('onea').style.display="none"
+      document.getElementById('twoa').style.display="none"
+      document.getElementById('threea').style.display="none"
+      document.getElementById('foura').style.display="none"
+      document.getElementById('fivea').style.display="none"
+      document.getElementById('sixa').style.display="none"
+      document.getElementById('butone').style.display="none"
+      document.getElementById('mad').textContent="Four score and seven years ago our "+one+" brought forth on this continent, a "+two+" nation, conceived in "+three+", and "+four+" to the "+five+" that all men are created "+six+"."
+      document.getElementById('buttwo').style.display=""
+    }
+    function back(){
+      document.getElementById('one').style.display=""
+      document.getElementById('two').style.display=""
+      document.getElementById('three').style.display=""
+      document.getElementById('four').style.display=""
+      document.getElementById('five').style.display=""
+      document.getElementById('six').style.display=""
+      document.getElementById('onea').style.display=""
+      document.getElementById('twoa').style.display=""
+      document.getElementById('threea').style.display=""
+      document.getElementById('foura').style.display=""
+      document.getElementById('fivea').style.display=""
+      document.getElementById('sixa').style.display=""
+      document.getElementById('butone').style.display=""
+      document.getElementById('mad').textContent=""
+      document.getElementById('buttwo').style.display="none"
+    }
+    </script>
+    <p id = "mad"></p>
+    <button style="display:none" id = "buttwo"onclick="back();">Go Back</button>
+    <label id = "onea" for="one">noun</label>
+    <input id="one"></input><br><br>
+    <label id = "twoa"for="two">adjective</label>
+    <input id="two"></input><br><br>
+    <label id = "threea"for="three">noun</label>
+    <input id="three"></input><br><br>
+    <label id = "foura"for="four">verb</label>
+    <input id="four"></input><br><br>
+    <label id = "fivea"for="five">noun</label>
+    <input id="five"></input><br><br>
+    <label id = "sixa"for="six">adjective</label>
+    <input id="six"></input><br><br>
+    <button id = "butone"onclick="go();">Generate</button>
+
+  </body>
+</html>
